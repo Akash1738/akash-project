@@ -1,9 +1,9 @@
-resource "aws_subnet" "devops_subnet" {
-  vpc_id     = aws_vpc.devops_vpc.id
-  cidr_block = "10.0.1.0/24"
-  map_public_ip_on_launch = true
+resource "aws_route_table_association" "a" {
+  subnet_id      = aws_subnet.public_subnet.id
+  route_table_id = aws_route_table.public_rt.id
+}
 
   tags = {
     Name = "devops-subnet"
   }
-}
+
