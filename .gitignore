@@ -1,7 +1,3 @@
-target/
-*.war
-node_modules/
-
 # Maven
 target/
 *.war
@@ -10,3 +6,4 @@ target/
 .terraform/
 *.tfstate
 *.tfstate.*
+*.zip
