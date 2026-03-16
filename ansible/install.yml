@@ -1,0 +1,21 @@
+---
+- hosts: servers
+  become: yes
+
+  tasks:
+
+  - name: Install Java
+    apt:
+      name: openjdk-11-jdk
+      state: present
+      update_cache: yes
+
+  - name: Install Docker
+    apt:
+      name: docker.io
+      state: present
+
+  - name: Start Docker
+    service:
+      name: docker
+      state: started
